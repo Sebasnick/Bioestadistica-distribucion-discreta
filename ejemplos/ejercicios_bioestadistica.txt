@@ -1,0 +1,25 @@
+# Ejercicio Bioestadístico 01 - Modelo de Lote (Binomial)
+
+Contexto:
+Un laboratorio multinacional fabrica ampollas de un analgésico inyectable de alto riesgo. Saben históricamente que la probabilidad basal de falla (un mal sellado del vidrio) es de p = 0.005. Hoy la máquina empaquetadora procesó un lote masivo de tamaño n = 45,000. 
+
+Pregunta del analista (Usuario debe introducir en app.py):
+1. Configurar n = 45000.
+2. Configurar p = 0.005.
+3. Consultar la probabilidad de obtener "x > 250" fallos al azar.
+
+Análisis Clínico en 'app.py':
+El usuario percibirá gracias a la función CDF (`scipy.stats.binom.sf`) y la media esperada (225), si exceder los 250 fallos pertenece a un escenario "Normal" o si indica una anomalía de producción, recomendándose rechazar todo el inventario de 45,000.
+
+# Ejercicio 02 - Farmacovigilancia (Poisson)
+
+Contexto:
+Un hospital administra típicamente vacunas generando un promedio histórico (lambda) de 4.2 eventos adversos leves (fiebre post-vacunación) por semana. Durante las últimas 72 horas han recibido un susto clínico contabilizando 12 pacientes ingresando de urgencia con reacción atribuida a la dosis.
+
+Pregunta del analista en la App:
+1. Configurar Tasa Promedio Lambda = 4.2
+2. Evento consultado x = 12
+3. Calcular P(X >= 12).
+
+Objetivo Biológico: 
+Distinguir si la anomalía clínica es una "mala racha azarosa" o un indicador estadísticamente significativo de un lote dañado.

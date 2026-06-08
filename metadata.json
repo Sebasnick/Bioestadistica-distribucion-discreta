@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Distribuciones Discretas Bioestadísticas",
+  "description": "Herramienta interactiva para enseñar distribuciones discretas (Binomial y Poisson) aplicadas al control de calidad farmacéutico y epidemiología, con simulación empírica, fórmulas matemáticas y síntesis de voz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

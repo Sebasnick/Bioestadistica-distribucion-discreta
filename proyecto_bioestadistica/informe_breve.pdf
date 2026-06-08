@@ -1,0 +1,17 @@
+# Informe Breve de Evaluación Bioestadística
+
+**Asignatura:** Bioestadística y Epidemiología
+**Aplicación:** Simulador Interactivo de Probabilidad Discreta (Binomial y Poisson)
+
+## Resumen del Procedimiento
+La aplicación está diseñada bajo el lenguaje Python utilizando la biblioteca interactiva Streamlit. El motor de cómputo depende nativamente de `scipy.stats` para garantizar la exactitud de los valores P (p-values) tanto para masa como probabilidad acumulada.
+
+## Justificación Clínica
+- **Modelo Binomial:** Aplicable estrictamente para control de calidad. Cada componente (reactivo, gragea, jeringa) cumple el supuesto de Bernoulli (Defectuoso/No defectuoso). Permite obtener las tablas de decisión estocásticas para rechazo o aceptación de lotes.
+- **Modelo de Poisson:** Permite estudiar eventos atípicos raros a lo largo del tiempo clínico continuo. Fundamental en la detección de brotes, análisis de morbimortalidad y alertas en farmacovigilancia.
+
+## Interpretación
+Los manuales integrados directamente en el código de `app.py` desvelan de manera directa que:
+- La varianza es un índice predictivo del rango de error estándar del equipo de recolección de datos.
+- Las colas largas en la graficación representan la remota probabilidad de tener conglomerados catastróficos.
+- Los P-Value se calculan estrictamente previniendo errores de Overflow, incluso en cálculos con `n >= 50,000`.
